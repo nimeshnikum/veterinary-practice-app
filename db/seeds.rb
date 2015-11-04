@@ -5,3 +5,28 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+### Example Users ###
+## Owner
+User.create(email: "admin@example.com", password: "password", 
+            role: 1, name: "Owns Everything")
+## Veterinarians
+User.create(email: "veterinarian@example.com", password: "password", 
+            role: 2, name: "Bob the Builder", address: "123 Sesame Street", 
+            city: "Compton", state: "California", zip: "90220", 
+            school_received_degree_from: "Stanford", years_in_practice: 6)
+User.create(email: "veterinarian2@example.com", password: "password", 
+            role: 2, name: "Susan Boyle", address: "201 E 21st Street", 
+            city: "Austin", state: "Texas", zip: "78705", 
+            school_received_degree_from: "The University of Texas", 
+            years_in_practice: 25)
+## Receptionist
+User.create(email: "receptionist@example.com", password: "password", 
+            role: 3, name: "Reese Epsun")
+## Customers
+User.create(email: "customer@example.com", password: "password", 
+            role: 4, name: "John Foo", address: "1 Way Street", 
+            city: "Spring", state: "Texas", zip: "77373")
+User.create(email: "customer2@example.com", password: "password", 
+            role: 4, name: "Isa Bella", address: "43 W 34th Street", 
+            city: "New York", state: "New York", zip: "10001")
