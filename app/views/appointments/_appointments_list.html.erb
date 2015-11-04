@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <%= @appointments.each do |appointment| %>
+    <% @appointments.each do |appointment| %>
       <tr>
         <td><%= appointment.date_of_visit %></td>
         <td><%= Pet.find(appointment.pet_id).name_of_pet %></td>

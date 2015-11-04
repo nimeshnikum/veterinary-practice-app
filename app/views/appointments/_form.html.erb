@@ -1,0 +1,26 @@
+<table summary="New appointment form fields">
+  <tr>
+    <th><%= f.label(:date_of_visit, "Date") %></th>
+    <td><%= f.date_select(:date_of_visit, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:pet_id, "Name") %></th>
+    <td><%= f.collection_select(:pet_id, Pet.all, :id, :name_of_pet, { prompt: "Select Pet" }, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:user_id, "Owner") %></th>
+    <td><%= f.collection_select(:user_id, User.where(role: 4), :id, :name, { prompt: "Select Owner" }, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:requires_a_reminder, "Requires a reminder?") %></th>
+    <td><%= f.check_box(:requires_a_reminder, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:reason_for_visit, "Reason for visit") %></th>
+    <td><%= f.text_field(:reason_for_visit, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:vet_id, "Veterinarian") %></th>
+    <td><%= f.collection_select(:vet_id, User.where(role: 2), :id, :name, { prompt: "Select Veterinarian" }, class: "form-control") %></td>
+  </tr>
+</table>
