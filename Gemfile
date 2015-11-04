@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Use devise for user authentication
 gem 'devise', '~> 3.5', '>= 3.5.2'
 
+# Use rails_admin for site administration
+gem 'rails_admin', '~> 0.7.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
