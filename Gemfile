@@ -15,6 +15,9 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 # Use rails_admin for site administration
 gem 'rails_admin', '~> 0.7.0'
 
+# Use bootstrap for styles
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
