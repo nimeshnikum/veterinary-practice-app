@@ -1,1 +1,12 @@
 <h1><%= "#{current_user.role.capitalize} Dashboard" %></h1>
+<hr />
+
+<% if current_user.admin? %>
+  <%= render 'admin_view' %>
+<% elsif current_user.veterinarian? %>
+  <%= render 'veterinarian_view' %>
+<% elsif current_user.receptionist? %>
+  <%= render 'receptionist_view' %>
+<% else %>
+  <%= render 'customer_view' %>
+<% end %>
