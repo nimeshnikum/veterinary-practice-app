@@ -1,5 +1,6 @@
 class Pet < ActiveRecord::Base
   belongs_to :user
+  has_many :appointments
   
   PET_TYPES = %w(Dog Cat Bird)
   
