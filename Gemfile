@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Use devise for user authentication
 gem 'devise', '~> 3.5', '>= 3.5.2'
 
+# Use cancancan for user authorization
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
+
 # Use rails_admin for site administration
 gem 'rails_admin', '~> 0.7.0'
 
