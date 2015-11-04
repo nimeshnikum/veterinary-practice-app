@@ -1,0 +1,30 @@
+<table summary="New pet form fields">
+  <tr>
+    <th><%= f.label(:name_of_pet, "Name") %></th>
+    <td><%= f.text_field(:name_of_pet, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:user_id, "Owner") %></th>
+    <td><%= f.text_field(:user_id, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:type_of_pet, "Type") %></th>
+    <td><%= f.select(:type_of_pet, ['Dog', 'Cat', 'Bird'], class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:breed, "Breed") %></th>
+    <td><%= f.text_field(:breed, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:age, "Age in years") %></th>
+    <td><%= f.number_field(:name_of_pet, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:weight, "Weight in lbs") %></th>
+    <td><%= f.number_field(:name_of_pet, class: "form-control") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:date_last_visited, "Date of Last Visit") %></th>
+    <td><%= f.date_select(:name_of_pet, class: "form-control") %></td>
+  </tr>
+</table>

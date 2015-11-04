@@ -1,2 +1,28 @@
 <h2>Viewing All Pets</h2>
 
+<table>
+  <thead>
+    <tr>
+      <th>Name of Pet</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Age in Years</th>
+      <th>Weight in lbs</th>
+      <th>Owner</th>
+      <th>Date of Last Visit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pets.each do |pet| %>
+      <tr>
+        <td><%= pet.name_of_pet %></td>
+        <td><%= pet.type_of_pet %></td>
+        <td><%= pet.breed %></td>
+        <td><%= pet.age %></td>
+        <td><%= pet.weight %></td>
+        <td><%= User.find(pet.user_id).name %></td>
+        <td><%= pet.date_last_visited %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
