@@ -14,4 +14,12 @@ class Appointment < ActiveRecord::Base
     end
   end
   
+  def appointment_reminder
+    if requires_a_reminder?
+      "Y"
+    else
+      "N"
+    end
+  end
+  
 end
