@@ -1,0 +1,26 @@
+<h2>Viewing Appointments</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Pet</th>
+      <th>Customer</th>
+      <th>Requires A reminder?</th>
+      <th>Veterinarian</th>
+      <th>Reason for Visit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.date_of_visit %></td>
+        <td><%= Pet.find(appointment.pet_id).name_of_pet %></td>
+        <td><%= User.find(appointment.user_id).name %></td>
+        <td><%= appointment.appointment_reminder %></td>
+        <td><%= User.find(appointment.vet_id).name %></td>
+        <td><%= appointment.reason_for_visit %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
