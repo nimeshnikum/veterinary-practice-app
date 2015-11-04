@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :pets
   
   enum role: [:user, :admin, :veterinarian, :receptionist, :customer]
   after_initialize :set_default_role, :if => :new_record?
