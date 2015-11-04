@@ -25,8 +25,16 @@ User.create(email: "receptionist@example.com", password: "password",
             role: 3, name: "Reese Epsun")
 ## Customers
 User.create(email: "customer@example.com", password: "password", 
-            role: 4, name: "John Foo", address: "1 Way Street", 
+            role: 4, id: 244, name: "John Foo", address: "1 Way Street", 
             city: "Spring", state: "Texas", zip: "77373")
 User.create(email: "customer2@example.com", password: "password", 
-            role: 4, name: "Isa Bella", address: "43 W 34th Street", 
+            role: 4, id: 245, name: "Isa Bella", address: "43 W 34th Street", 
             city: "New York", state: "New York", zip: "10001")
+
+### Example Pets ###
+Pet.create(name_of_pet: "Pumpkin", type_of_pet: "Dog", breed: "Mixed", 
+           age: 2, weight: 40, date_last_visited: (Date.today - 90), 
+           user_id: 244)
+Pet.create(name_of_pet: "Wiz Khalifa", type_of_pet: "Bird", breed: "Parakeet", 
+           age: 5, weight: 1, date_last_visited: (Date.today - 420), 
+           user_id: 245)
